@@ -1,0 +1,14 @@
+<launch>
+    <param name="robot_description" command="$(find xacro)/xacro $(find urdf_by)/urdf/xacro/car.xacro" />
+
+   <node pkg="tf2_ros" type="static_transform_publisher" name="base_footprint" args="0 0 0 0 0 0 /odom /base_footprint" output="screen" />
+   <node pkg="rviz" type="rviz" name="rviz" args="-d $(find urdf_by)/config/show_mycar.rviz" />
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" output="screen" />
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen" />
+  <!-- <node pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="joint_state_publisher_gui" output="screen" /> -->
+
+<node name="arbotix" pkg="arbotix_python" type="arbotix_driver" output="screen">
+     <rosparam file="$(find urdf_by)/config/control.yaml" command="load" />
+     <param name="sim" value="true" />
+</node>
+</launch>

@@ -1,0 +1,4 @@
+//根据赵顼座视频作的仿真包，有odom和cmd_vel.运行launch文件即可，key_control是键盘控制节点wasd控制 
+
+原则上每次关闭gazebo都应该执行killall gzserver，否则可能会导致一些问题
+xacro上不要有中文注释
