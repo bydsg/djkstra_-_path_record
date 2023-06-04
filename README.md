@@ -21,6 +21,8 @@ beh 2 3 4	（后一段道路的编号）<br>
 <br>
 设置好djstl_main.cpp中的roadMap_path，确定地图的地址和名称后运行<br>
 roslaunch by_djstl 1.launch（改launch已经启动仿真环境）<br>
-在启动的rviz中点击2D Nav Goal后点击目标点进行全局路径规划
+在启动的rviz中点击2D Nav Goal后点击目标点进行全局路径规划<br>
+![image](https://github.com/bydsg/djkstra_-_path_record/blob/main/pic/2023-06-04%2017-21-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png)
+
 
 
